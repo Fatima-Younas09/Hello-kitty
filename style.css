@@ -1,0 +1,313 @@
+/* Base Styles */
+body {
+    background-color: rgb(248, 199, 207);
+    color: rgb(211, 57, 82);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* NEW: Prevent horizontal scrolling */
+    width: 100%; /* NEW: Make sure body takes full width */
+}
+
+/* Header */
+.header {
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box; /* NEW: Include padding in width */
+}
+
+.hello {
+    margin: 0;
+    font-size: 20px;
+}
+
+.comfy {
+    margin: 0;
+    font-size: 13px;
+}
+
+/* Main Content - FIXED FOR MOBILE */
+.main {
+    font-size: clamp(28px, 8vw, 60px); /* Made smaller on mobile */
+    letter-spacing: 0px;
+    margin-top: 20px; /* Reduced on mobile */
+    color: rgb(184, 25, 51);
+    font-family: sans-serif;
+    text-align: center;
+    padding: 0 15px; /* Reduced padding on mobile */
+    line-height: 1.2;
+}
+
+.para {
+    font-size: clamp(14px, 4vw, 20px); /* Smaller on mobile */
+    font-family: sans-serif;
+    text-align: center;
+    padding: 0 15px; /* Reduced padding on mobile */
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
+/* FIX FOR BLUE DIV CONTAINER */
+.blue {
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /* NEW: Stack on mobile */
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%; /* NEW: Prevent overflow */
+}
+
+/* Make the large Hello Kitty image responsive */
+.blue img {
+    width: 100%; /* NEW: Image will shrink to fit container */
+    height: auto; /* NEW: Keep aspect ratio */
+    max-width: 550px; /* NEW: Don't get bigger than original */
+    margin-top: 20px;
+}
+
+/* Button Container - CENTER THE BUTTONS */
+.blue > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* NEW: Center everything */
+    text-align: center;
+    width: 100%;
+}
+
+/* Buttons - CENTERED AND RESPONSIVE */
+.button {
+    color: white;
+    background-color: rgb(194, 68, 89);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 8px 0; /* Changed from left margin to top/bottom */
+    width: 200px; /* Fixed width for buttons */
+    max-width: 80%; /* Don't get too wide on mobile */
+}
+
+.secondbutton {
+    color: rgb(194, 68, 89);
+    padding: 12px 20px;
+    border: 2px solid rgb(194, 68, 89);
+    background-color: white;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 8px 0; /* Changed from left margin to top/bottom */
+    width: 200px; /* Fixed width for buttons */
+    max-width: 80%; /* Don't get too wide on mobile */
+}
+
+/* Section Headers */
+.smolhead {
+    font-size: clamp(24px, 6vw, 40px);
+    color: rgb(184, 25, 51);
+    font-family: sans-serif;
+    text-align: center;
+    padding: 0 15px;
+}
+
+/* Pink Section */
+.pink {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px; /* Smaller on mobile */
+    padding: 15px;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Table */
+.table {
+    width: 100%;
+    max-width: 500px; /* Reduced on mobile */
+    background-color: rgb(199, 79, 99);
+    border-collapse: collapse;
+    margin: 20px auto;
+    overflow: hidden; /* NEW: Prevent overflow */
+}
+
+.table td {
+    padding: 15px; /* Reduced on mobile */
+    background-color: white;
+    border: 1px solid rgb(145, 22, 42);
+    text-align: center;
+}
+
+.green {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Last Section */
+.lasth {
+    font-size: clamp(28px, 7vw, 50px);
+    color: rgb(167, 50, 69);
+    text-align: center;
+    margin: 30px 15px 15px 15px;
+    padding: 0 10px;
+}
+
+.lastp {
+    font-size: clamp(16px, 4vw, 25px);
+    color: rgb(167, 50, 69);
+    text-align: center;
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+
+/* Last Table - FIXED FOR MOBILE */
+.last {
+    width: 90%; /* Use percentage, not fixed */
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    border-collapse: collapse;
+    table-layout: fixed; /* NEW: Control column widths */
+}
+
+.last td {
+    padding: 12px; /* Smaller on mobile */
+    background-color: rgb(240, 130, 130);
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+    font-size: 14px; /* Smaller text on mobile */
+    overflow: hidden; /* NEW: Prevent content overflow */
+}
+
+/* Make images inside last table responsive */
+.last img {
+    width: 40px; /* Smaller on mobile */
+    height: auto;
+}
+
+/* Footer */
+.foot {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 15px;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.foot p {
+    margin: 0;
+    font-size: 14px; /* Smaller on mobile */
+    font-family: sans-serif;
+    text-align: center;
+    padding: 0 10px;
+}
+
+/* Footer Buttons */
+.b1, .b2 {
+    width: 80px; /* Smaller on mobile */
+    color: white;
+    background-color: rgb(185, 61, 81);
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 13px; /* Smaller on mobile */
+    cursor: pointer;
+    margin: 3px;
+}
+
+/* Remove the old margins that were causing overflow */
+.last, .lasth, .lastp {
+    margin-left: 0 !important; /* REMOVED the 400px/500px margins */
+}
+
+/* LAPTOP STYLES (768px and above) */
+@media (min-width: 768px) {
+    .blue {
+        flex-direction: row; /* Side by side on laptop */
+        justify-content: center;
+        padding: 30px;
+    }
+    
+    .blue img {
+        width: 550px; /* Fixed size on desktop */
+        height: 550px;
+        margin-top: 0;
+        margin-left: 30px;
+    }
+    
+    .button, .secondbutton {
+        width: auto; /* Auto width on desktop */
+        padding: 14px 24px;
+        margin: 10px;
+        display: inline-block; /* Buttons side by side */
+    }
+    
+    .button {
+        margin-left: 40px; /* Original position on desktop */
+    }
+    
+    .secondbutton {
+        margin-left: 50px; /* Original position on desktop */
+    }
+    
+    .blue > div:first-child {
+        align-items: flex-start; /* Left align on desktop */
+        text-align: left;
+    }
+    
+    .pink {
+        flex-direction: row;
+        justify-content: center;
+        font-size: 20px;
+    }
+    
+    .foot {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+    
+    .foot p {
+        font-size: medium;
+    }
+    
+    .b1, .b2 {
+        width: 90px;
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .b1 {
+        margin-left: auto; /* Push to right on desktop */
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+    .main {
+        font-size: 24px;
+        margin-top: 15px;
+    }
+    
+    .last td {
+        padding: 8px;
+        font-size: 12px;
+    }
+    
+    .last img {
+        width: 30px;
+    }
+    
+    .button, .secondbutton {
+        width: 90%;
+    }
+}
